@@ -1,0 +1,13 @@
+<p>comp3 works!</p>
+
+<h2>zip() vs combineLatest() vs forkJoin()</h2>
+<br /><br />
+zip() : Prend un groupe d'observables, attend que tous les observables aient
+émis une valeur puis émet le tout sous forme de tableau.
+<br /><br />
+combineLatest() : Comme zip(), combineLatest() attendra que tous les observables
+aient émis une valeur sous forme de tableau. A partir de là, elle émettra un
+tableau à chaque fois qu'un observable émettra une valeur.
+<br /><br />
+forkJoin() : Prend un groupe d'Observables, attend leur émission complète et
+émet la valeur finale de chaque Observable sous forme de tableau.
