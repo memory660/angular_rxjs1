@@ -10,6 +10,7 @@ import { Comp4Component } from './comp4/comp4.component';
 import { BlackListComponent } from './black-list/black-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TogglingStateComponent } from './toggling-state/toggling-state.component';
+import { TimeSelectComponent } from './time-select/time-select.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TogglingStateComponent } from './toggling-state/toggling-state.componen
     Comp4Component,
     BlackListComponent,
     TogglingStateComponent,
+    TimeSelectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
