@@ -1,0 +1,26 @@
+nous avons implémenté une propriété, qui est un Observable, pour gérer une
+partie de l'interface utilisateur. Il combine la sortie de nos trois contrôles
+de formulaire en utilisant combineLatest, puis utilise leur sortie combinée pour
+dériver l'état booléen. <br />
+startWith(false), startWith([]), startWith(null), --> nous leur faisons donc
+tous émettre leurs valeurs par défaut une fois immédiatement.
+
+<br /><br />
+
+Select a User<br />
+<select [formControl]="selectedUserId">
+  <option>Select a User</option>
+  <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+</select>
+<br />
+blackListedUsers<br />
+<select [formControl]="blackListedUsers" multiple>
+  <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+</select>
+<br />
+Allow black listed users
+<input type="checkbox" [formControl]="allowBlackListedUsers" />
+<br />
+<button [disabled]="isDisabled$ | async">Submit</button>
+isDisabled = {{ isDisabled$ | async }} <br /><br /><br />
+{{ users | json }}
