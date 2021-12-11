@@ -7,6 +7,7 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { TimeSelectComponent } from './time-select/time-select.component';
 import { TogglingStateComponent } from './toggling-state/toggling-state.component';
+import { UsersComponent } from './users-search/users/users.component';
 
 const routes: Routes = [
   { path: 'comp1', component: Comp1Component },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'black-list', component: BlackListComponent },
   { path: 'toggling-state', component: TogglingStateComponent },
   { path: 'time-select', component: TimeSelectComponent },
+  { path: 'users', component: UsersComponent },
 ];
 
 @NgModule({

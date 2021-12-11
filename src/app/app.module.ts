@@ -11,6 +11,8 @@ import { BlackListComponent } from './black-list/black-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TogglingStateComponent } from './toggling-state/toggling-state.component';
 import { TimeSelectComponent } from './time-select/time-select.component';
+import { UsersComponent } from './users-search/users/users.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,15 @@ import { TimeSelectComponent } from './time-select/time-select.component';
     BlackListComponent,
     TogglingStateComponent,
     TimeSelectComponent,
+    UsersComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

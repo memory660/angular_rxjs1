@@ -1,0 +1,23 @@
+<div *ngIf="userDetail$ | async as userDetail; else pickOne">
+  {{ userDetail.name }}
+</div>
+
+<ng-template #pickOne>Pick a user to see there details!</ng-template>
+
+<input #input (input)="onInput(input.value)" type="text" />
+<ng-container *ngIf="users$ | async as users">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Contact</th>
+    </tr>
+    <tr (click)="onSelected(user.id)" *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.company.name }}</td>
+      <td>{{ user.username }}</td>
+    </tr>
+  </table>
+</ng-container>
+<button (click)="addUser()">Add User</button>
+<div *ngIf="error">Sorry there was an error</div>
